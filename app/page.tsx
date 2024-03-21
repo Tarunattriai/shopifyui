@@ -1,5 +1,15 @@
-import Image from "next/image";
+       //@ts-nocheck
 
+const data = [
+  {
+    "name": "Creatine",
+    "claim": 5,
+    "actual": 5.2,
+    "percentage": 83.333333,
+    "isLiveTesting": true,
+    "testingReportLink": "/path/to/report"
+  },
+]
 export default function Home() {
   return (
     <div className="w-[413px]">
@@ -14,6 +24,15 @@ export default function Home() {
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import Sidebar from "@/components/sidebar";
 
 export function Component() {
   return (
@@ -24,10 +43,10 @@ export function Component() {
       </p>
       <div className="mt-4 grid grid-cols-2 h-[28px] ">
         <Button className="w-full h-[28px]   " variant="outline">
-   <span className="text-[10px]" >What’s in it?</span>
+          <span className="text-[10px]" >What’s in it?</span>
         </Button>
         <Button className="w-full h-[28px]  " variant="secondary">
-        <span className="text-[10px]" >What’s not in it?</span>
+          <span className="text-[10px]" >What’s not in it?</span>
         </Button>
       </div>
       <div className="mt-2">
@@ -44,29 +63,36 @@ export function Component() {
             }}
           />
         </div>
- <div className="flex w-full justify-between ">
- <span className="text-[8px] text-gray-500">0mg</span>
+        <div className="flex w-full justify-between ">
+          <span className="text-[8px] text-gray-500">0mg</span>
 
-<div className="mt-1 flex justify-end">
-  <span className="text-[8px] text-gray-500">5mg</span>
-  <span className="ml-7 text-[8px] font-medium">5.2mg</span>
-</div>
- </div>
+          <div className="mt-1 flex justify-end">
+            <span className="text-[8px] text-gray-500">5mg</span>
+            <span className="ml-7 text-[8px] font-medium">5.2mg</span>
+          </div>
+        </div>
       </div>
       <div className="flex justify-between ">
-      <div className="mt-6 flex items-center space-x-2">
-        <div className="flex flex-col justify-center p-1.5 fill-white  ">
-          <div className="shrink-0 w-2 h-2 bg-emerald-500 rounded-3xl" />
+        <div className="mt-6 flex items-center space-x-2">
+          <div className="flex flex-col justify-center p-1.5 fill-white  ">
+            <div className="shrink-0 w-2 h-2 bg-emerald-500 rounded-3xl" />
+          </div>
+          <span className="text-[10px] font-medium">Live Testing</span>
         </div>
-        <span className="text-[10px] font-medium">Live Testing</span>
+
+        <Sheet  >
+          <SheetTrigger>
+              <div  className="text-[10px] mt-6 underline  " >View Testing Report</div>
+          </SheetTrigger>
+          <SheetContent   >
+        <Sidebar className={"p-0"} />
+          </SheetContent>
+        </Sheet>
+
+
       </div>
 
-      <div className="mt-4">
-        <Button variant="link" className="text-[10px]" >View Testing Report</Button>
-      </div>
-      </div>
 
- 
     </div>
   )
 }
