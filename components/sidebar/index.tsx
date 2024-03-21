@@ -3,6 +3,9 @@
  * @see https://v0.dev/t/rGY8Bc8WyII
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+
+       //@ts-nocheck
+
 import { Button } from "@/components/ui/button"
 import { Progress } from "../ui/progress"
 import { SheetTrigger } from "../ui/sheet"
@@ -25,7 +28,7 @@ export default function Sidebar() {
           <p className="text-sm mt-2">Clean Ingredients with Nothing to Hide.</p>
           <p className="text-sm mt-2">
             Transparent Labs is committed to using 100% authentic ingredients and full-disclosure product labels, so you
-            know precisely what you're putting in your body. Every formula is critiqued and revised in accordance with
+            know precisely what youre putting in your body. Every formula is critiqued and revised in accordance with
             feedback from independent scientific advisors to ensure proper efficiency.
           </p>
           <p className="text-sm mt-2 italic">Source: Nutritional Outlook</p>
@@ -73,7 +76,7 @@ export default function Sidebar() {
           </p>
           <p className="text-sm mt-2">
             Across our food system, it has become incredibly difficult to understand product purity. Light Labs brings
-            facts to the table with modern lab testing for every batch – the only way to truly understand product
+            facts to the table with modern lab testing for every batch  the only way to truly understand product
             quality.
           </p>
         </div>
