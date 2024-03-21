@@ -15,17 +15,17 @@ export default function Home() {
 
  function Component() {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md h-[290px]">
+    <div className="bg-white p-6 rounded-lg shadow-md h-[290px]"  >
       <h2 className=" font-extrabold">Test Results Certified by Light Labs</h2>
       <p className="mt-2 text-[10px] font-normal text-gray-600">
         Every batch is tested by Light Labs, ISO 17025 certified, to verify
         active ingredients and product purity.
       </p>
       <div className="mt-4 grid grid-cols-2 h-[28px] ">
-        <Button className="w-full h-[28px]   ">
+        <Button   className="w-full h-[28px]   " variant="outline" >
           <span className="text-[10px]">What s in it?</span>
         </Button>
-        <Button className="w-full h-[28px]  ">
+        <Button className="w-full h-[28px]  " variant="outline">
           <span className="text-[10px]">What s not in it?</span>
         </Button>
       </div>
