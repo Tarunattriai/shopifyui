@@ -1,15 +1,7 @@
-       //@ts-nocheck
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Sidebar from "@/components/sidebar";
 
-const data = [
-  {
-    "name": "Creatine",
-    "claim": 5,
-    "actual": 5.2,
-    "percentage": 83.333333,
-    "isLiveTesting": true,
-    "testingReportLink": "/path/to/report"
-  },
-]
 export default function Home() {
   return (
     <div className="w-[413px]">
@@ -18,35 +10,23 @@ export default function Home() {
   );
 }
 
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/QtZ1l55hB0y
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import Sidebar from "@/components/sidebar";
 
-export function Component() {
+
+
+ function Component() {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md h-[290px]">
       <h2 className=" font-extrabold">Test Results Certified by Light Labs</h2>
       <p className="mt-2 text-[10px] font-normal text-gray-600">
-        Every batch is tested by Light Labs, ISO 17025 certified, to verify active ingredients and product purity.
+        Every batch is tested by Light Labs, ISO 17025 certified, to verify
+        active ingredients and product purity.
       </p>
       <div className="mt-4 grid grid-cols-2 h-[28px] ">
-        <Button className="w-full h-[28px]   " variant="outline">
-          <span className="text-[10px]" >What’s in it?</span>
+        <Button className="w-full h-[28px]   ">
+          <span className="text-[10px]">What s in it?</span>
         </Button>
-        <Button className="w-full h-[28px]  " variant="secondary">
-          <span className="text-[10px]" >What’s not in it?</span>
+        <Button className="w-full h-[28px]  ">
+          <span className="text-[10px]">What s not in it?</span>
         </Button>
       </div>
       <div className="mt-2">
@@ -80,20 +60,17 @@ export function Component() {
           <span className="text-[10px] font-medium">Live Testing</span>
         </div>
 
-        <Sheet  >
+        <Sheet>
           <SheetTrigger>
-              <div  className="text-[10px] mt-6 underline  " >View Testing Report</div>
+            <div className="text-[10px] mt-6 underline  ">
+              View Testing Report
+            </div>
           </SheetTrigger>
-          <SheetContent   >
-        <Sidebar className={"p-0"} />
+          <SheetContent>
+            <Sidebar />
           </SheetContent>
         </Sheet>
-
-
       </div>
-
-
     </div>
-  )
+  );
 }
-
