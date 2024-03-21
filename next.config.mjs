@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-
-    swcMinify: false // it should be false by default 
-
-};
+const nextConfig = {};
 
 export default nextConfig;
